@@ -1,9 +1,11 @@
 <script>
-  let {percentage = 0} = $props();
+  let {percentage = 0, color} = $props();
 </script>
 
 <div class=bar-container>
-  <div class=bar style="width:{percentage}%">
+  <div class=bar style="width:{percentage}%;
+    background-color: #{color};
+  ">
   </div>
 </div>
 
@@ -18,7 +20,6 @@
   }
   .bar{
     height:1.875rem;
-    background-color: #345995;
     border-radius:40px;
   }
 </style>
