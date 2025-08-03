@@ -1,38 +1,30 @@
-# sv
+# 🗳️ Berry's PollForge
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## ⚙️ Tech Stack
+- Svelte & SvelteKit
+- Supabase (PostgreSQL)
+- Bootstrap
 
-## Creating a project
+## 📚 About the Project
+This is my first full-stack web application, created entirely by me. I built it as a custom polling platform for my friend group, but it turned into a deeper learning experience in full-stack development. It includes user authentication, poll creation and voting, avatar customization, and a comment system. The project helped me understand the full development cycle — from frontend and backend logic to database integration and deployment. It reflects both my technical progress and my commitment to continuous learning.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## ✨ Features
+- Register/Login system with a custom Authentication system 
+- Passwords are hashed using **bcrypt** before storing
+- **JWTs (JSON Web Tokens)** are used to manage user sessions securely
+- Role-based access to protect poll deleting/creation features
+- Create and vote in custom polls
+- Comment system under each poll
+- Choose or update a custom avatar
+- Secure backend with role-based access
+- Fully responsive design for all screen sizes (mobile, tablet, desktop)
+- Server-Side Rendering (SSR) with SvelteKit
+-  Dynamic page loading with `+page.server.js`using `load` functions
 
-```bash
-# create a new project in the current directory
-npx sv create
 
-# create a new project in my-app
-npx sv create my-app
-```
 
-## Developing
+## 🌐 Live Demo
+[https://poll-forge.pages.dev](https://poll-forge.pages.dev)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 📝 Notes
+This is a personal learning project. I built everything myself and learned a lot about full-stack workflows, handling authentication, deploying live projects, and working with databases.
