@@ -3,7 +3,7 @@
 Poll-Forge is a full-stack polling platform designed for seamless group engagement. It enables authenticated users to create customized polls, vote, comment, and personalize their avatars — all within an intuitive, modern interface powered by Svelte and Supabase.
 
 ## ⚙️ Tech Stack
-- Svelte & SvelteKit (with SSR and custom API endpoints)
+- Svelte (javascript framework) & SvelteKit (full-stack web application framework built on top of Svelte) (with SSR and custom API endpoints)
 - Supabase (PostgreSQL)
 - Bootstrap
 
