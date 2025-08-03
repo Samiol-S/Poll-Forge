@@ -1,12 +1,15 @@
 # 🗳️ Berry's PollForge
 
 ## ⚙️ Tech Stack
-- Svelte & SvelteKit
+- Svelte & SvelteKit (with SSR and custom API endpoints)
 - Supabase (PostgreSQL)
 - Bootstrap
 
 ## 📚 About the Project
-This is my first full-stack web application, created entirely by me. I built it as a custom polling platform for my friend group, but it turned into a deeper learning experience in full-stack development. It includes user authentication, poll creation and voting, avatar customization, and a comment system. The project helped me understand the full development cycle — from frontend and backend logic to database integration and deployment. It reflects both my technical progress and my commitment to continuous learning.
+This is my first full-stack web application, built entirely by me as a custom polling platform for my friend group. What started as a simple idea turned into a deep learning experience in full-stack development. The app includes user authentication with secure password handling, poll creation and voting, avatar customization, and a comment system for interaction.
+Through this project, I gained hands-on experience with frontend and backend logic, database integration using Supabase, and deployment with Cloudflare Pages. It reflects both my technical progress and my commitment to continuous learning and building practical solutions.
+
+
 
 ## ✨ Features
 - Register/Login system with a custom Authentication system 
@@ -14,12 +17,14 @@ This is my first full-stack web application, created entirely by me. I built it 
 - **JWTs (JSON Web Tokens)** are used to manage user sessions securely
 - Role-based access to protect poll deleting/creation features
 - Create and vote in custom polls
-- Comment system under each poll
+- Comment system under each poll for interaction
 - Choose or update a custom avatar
 - Secure backend with role-based access
 - Fully responsive design for all screen sizes (mobile, tablet, desktop)
 - Server-Side Rendering (SSR) with SvelteKit
--  Dynamic page loading with `+page.server.js`using `load` functions
+- Dynamic page loading with `+page.server.js`using `load` functions
+- Custom backend API routes implemented in src/routes/api/+server.js
+- Deployment on Cloudflare Pages
 
 
 
