@@ -7,10 +7,6 @@ Poll-Forge is a full-stack polling platform designed for seamless group engageme
 - Supabase (PostgreSQL)
 - Bootstrap 5 
 
-## 📚 About the Project
-This is my first full-stack web application, built entirely by me as a custom polling platform for my friend group. What started as a simple idea turned into a deep learning experience in full-stack development. The app includes user authentication with secure password handling, poll creation and voting, avatar customization, and a comment system for interaction.
-Through this project, I gained hands-on experience with frontend and backend logic, database integration using Supabase, and deployment with Cloudflare Pages. It reflects both my technical progress and my commitment to continuous learning and building practical solutions.
-
 
 
 ## ✨ Features
@@ -21,12 +17,17 @@ Through this project, I gained hands-on experience with frontend and backend log
 - Create and vote in custom polls
 - Comment system under each poll for interaction
 - Choose or update a custom avatar
-- Secure backend with role-based access
 - Fully responsive design for all screen sizes (mobile, tablet, desktop)
 - Server-Side Rendering (SSR) with SvelteKit
 - Dynamic page loading with `+page.server.js`using `load` functions
 - Custom backend API routes implemented in src/routes/api/+server.js
 - Deployment on Cloudflare Pages
+
+
+
+## 📚 About the Project
+This is my first full-stack web application, built entirely by me as a custom polling platform for my friend group. What started as a simple idea turned into a deep learning experience in full-stack development. The app includes user authentication with secure password handling, poll creation and voting, avatar customization, and a comment system for interaction.
+Through this project, I gained hands-on experience with frontend and backend logic, database integration using Supabase, and deployment with Cloudflare Pages. It reflects both my technical progress and my commitment to continuous learning and building practical solutions.
 
 
 
