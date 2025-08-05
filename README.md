@@ -9,7 +9,7 @@ Poll-Forge is a full-stack polling platform designed for seamless group engageme
 
 
 
-## ✨ Features
+## Features
 - Register/Login system with a custom Authentication system 
 - Passwords are hashed using **bcrypt** before storing
 - **JWTs (JSON Web Tokens)** are used to manage user sessions securely
@@ -34,5 +34,5 @@ Through this project, I gained hands-on experience with frontend and backend log
 ## 🌐 Live Demo
 [https://poll-forge.pages.dev](https://poll-forge.pages.dev)
 
-## 📝 Notes
+## Notes
 This is a personal learning project. I built everything myself and learned a lot about full-stack workflows, handling authentication, deploying live projects, and working with databases.
