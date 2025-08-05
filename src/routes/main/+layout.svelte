@@ -165,67 +165,6 @@
   {@render children()}
 </main>
 
-<button class="create-poll mb-3 ms-3 p-3 px-4" data-bs-toggle="modal" data-bs-target="#poll-modal">+ Create a new Poll</button>
-
-<!-- code under here is for the modal ! -->
-
-<div class="modal fade " id="poll-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Create a Poll</h5>
-        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body overflow-auto">
-
-
-        <div class="options-list">
-           <div class="mb-4">
-            <p class="mb-2 align-self-start  ps-2">question</p>
-            <input bind:value={question} class="input p-3 px-5" type="text" placeholder="Enter the question" maxlength="100">
-          </div>
-
-          <h3 class="text-center mb-0">Options</h3>
-          {#each optionFields as optionField,index}
-            <div class="mb-3" >
-              <p  class="mb-2 align-self-start  ps-2">Option {index + 1} <strong>&#183;</strong> <button class="delete-option-button ps-0" onclick={() => {optionFields.splice(index,1)}}>Delete</button></p>
-              <input maxlength="72" id={index} class="input p-3 px-5" type="text" placeholder="option name">
-            </div>
-          {/each}
-
-          {#if wrong}
-            <p class="invalid text-center">Please fill in the fields.</p>
-          {/if}
-          {#if successful}
-            <p class="valid text-center">Your poll was created successfully.</p>
-          {/if}
-        </div>
-        <div class="d-flex justify-content-end">
-          {#if optionFields.length < 8}
-            <button class="add-option-button" onclick={() => {
-              newOption();
-            }}>Add an option</button>
-          {/if}
-          
-        </div>
-      </div>
-      {#if optionFields.length < 2}
-        <div class="modal-footer">
-          <button disabled onclick={postPoll} class="disabled-create-button p-2 px-4">Create</button>
-        </div>
-        {:else}
-        <div class="modal-footer">
-          <button onclick={postPoll} class="create-button p-2 px-4">Create</button>
-        </div>
-      {/if}
-      
-      
-
-
-    </div>
-  </div>
-</div>
-
 <style>
   .invalid {
     color:#E40066;
@@ -255,62 +194,7 @@
     min-height:30vh;
     z-index:99;
   }
-  .delete-option-button{
-    background-color: white;
-    border:none;
-  }
-  .delete-option-button:hover{
-    color:#E40066;
-  }
-  .create-button{
-    transition: opacity 0.3s;
-    color:white;
-    background-color: #345995;
-    border:none;
-    border-radius:4px;
-    font-weight: bold;
-  }
-  .create-button:hover{
-    transition: opacity 0.3s;
-    opacity: 0.7;
-  }
-  .create-button:active{
-    transition: opacity 0.1s;
-    opacity: 0.4;
-  }
-  .disabled-create-button{
-    color:white;
-    background-color: #345995;
-    border:none;
-    border-radius:4px;
-    font-weight: bold;
-    opacity:0.4;
-  }
-  .add-option-button{
-    color:#345995;
-    background-color: white;
-    border:none;
-  }
-  .add-option-button:hover{
-    opacity:0.6;
-  }
-  .modal{
-    color:#EDEDED;
-  }
-  .input{
-    transition:color 0.3s;
-    width:100%;
-
-    color:#6B6B6B;
-    background-color: #F7F7F2;
-    border:none;
-    border-radius:12px;
-  }
-  .input:hover::placeholder{
-    transition:color 0.2s;
-    color: black;
-  }
-
+  
   .filters-title{
     color:#6B6B6B;
     font-weight: bold;
@@ -338,25 +222,6 @@
     padding-top:8rem;
     padding-bottom:10rem;
     position:relative;
-  }
-  .create-poll{
-    transition: box-shadow 0.5s, transform 0.5s;
-    position:fixed;
-    right:2rem;
-    bottom:2rem;  
-    background-color: #F4F4F4;
-    color:#6B6B6B;
-    border:none;
-    border-radius:105px;
-    font-size:1.2rem;
-    font-weight:bolder;
-    box-shadow: 1px 4px 5px rgb(116, 116, 116);
-  }
-  .create-poll:hover{
-    transition: box-shadow 0.5s, transform 0.5s;
-    box-shadow: 1px 12px 5px rgb(116, 116, 116);
-    transform:translateY(-0.4rem);
-  
   }
   
   .header{

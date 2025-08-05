@@ -61,7 +61,7 @@
 
   <h2 transition:fade class="comments-title">Poll Comments :</h2>
 
-  <Input pollID={pollID} />
+  <Input getComments={getComments} pollID={pollID} />
 
   <div transition:fly={{x:-50, duration:550}} class="comments d-flex flex-column justify-content-top align-items-start">
     {#each comments as comment}
@@ -121,7 +121,7 @@
   .reload-button{
     transition: box-shadow 0.5s, transform 0.5s;
     position:fixed;
-    right:16rem;
+    right:10rem;
     bottom:3.2rem;  
     background-color: #F4F4F4;
     color:#6B6B6B;

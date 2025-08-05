@@ -1,5 +1,5 @@
 <script>
-  let { totalVotes=0 , name , id , userChoices , allChoices, color, isDisabled } = $props();
+  let { refreshPolls ,totalVotes=0 , name , id , userChoices , allChoices, color, isDisabled } = $props();
 
   
   const thisOptionChoices = allChoices.filter(choice => choice.optionID === id);
@@ -32,6 +32,8 @@
 
       patchRequest.then((response) => {
         return response.json();
+      }).then(() => {
+        refreshPolls();
       })
     }
     let optionChoice = userChoices.filter( userChoice => userChoice.optionID === id );

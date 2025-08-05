@@ -1,5 +1,5 @@
 <script>
-  let { pollQuestion, pollTime, options , pollID, userID, currentUserID, userChoices, allChoices, username, color = '345995', isDisabled ='', margin = '3rem' } = $props();
+  let { refreshPolls, deletedPoll, pollQuestion, pollTime, options , pollID, userID, currentUserID, userChoices, allChoices, username, color = '345995', isDisabled ='', margin = '3rem' } = $props();
   import Option from "./Option.svelte";
   import dayjs from 'dayjs';
   import relativeTime from 'dayjs/plugin/relativeTime';
@@ -31,6 +31,8 @@
 
       console.log(json.status);
       
+    }).then(() => {
+      deletedPoll(pollID);
     })
   }
 
@@ -55,7 +57,7 @@
 
     {#each options as option}
       {#if option.pollID === pollID}
-        <Option votes={option.votes} name={option.name} totalVotes={totalVotes} chosen={option.chosen} id={option.optionID} userChoices={userChoices} allChoices ={ allChoices } color={color}  isDisabled = {isDisabled}/>
+        <Option refreshPolls = {refreshPolls} votes={option.votes} name={option.name} totalVotes={totalVotes} chosen={option.chosen} id={option.optionID} userChoices={userChoices} allChoices ={ allChoices } color={color}  isDisabled = {isDisabled}/>
       {/if}
     {/each}
 

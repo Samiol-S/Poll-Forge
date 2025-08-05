@@ -1,5 +1,5 @@
 <script>
-  let { pollID } = $props();
+  let { getComments, pollID } = $props();
   import { fade } from "svelte/transition";
   
   let text = $state('');
@@ -20,6 +20,7 @@
     }).then((json) => {
       
       text = '';
+      getComments();
     })
   }
 </script>

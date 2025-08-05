@@ -63,7 +63,7 @@ export const POST = async ({ request, cookies }) => {
   .from('polls')
   .insert({ question, userID, username })
   .select('pollID')
-
+  
 
   if (error) {
     console.log('Sorry, Something went wrong.');
