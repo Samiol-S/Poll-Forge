@@ -172,8 +172,8 @@
 
 
 {#if !refreshed}
-  <button class="reload-button p-2" aria-label="refresh-button" onclick={getPollsFromServer}>
-    <img class="reload-image spin" src="/images/reload.png" alt="refresh">
+  <button class="reload-button p-2 bigger" aria-label="refresh-button" onclick={getPollsFromServer}>
+    <img class="reload-image spin bigger" src="/images/reload.png" alt="refresh">
   </button>
   {:else}
     <button class="reload-button p-2" aria-label="refresh-button" onclick={getPollsFromServer}>
@@ -265,6 +265,10 @@
   .reload-image{
     width:2rem;
     
+  }
+  .bigger{
+    transform: translateX(-5px);
+    scale:1.1;
   }
   .reload-button{
     transition: box-shadow 0.5s, transform 0.5s;
